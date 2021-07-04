@@ -1,0 +1,17 @@
+//- nav.pug
+- let nav_links = {"About": "aboutMe", "Gallery":"gallery", "Contact": "contact"};
+
+nav
+    |
+    |
+    ul
+        |
+        |
+        for name, link in nav_links
+            li
+                a(href=`./${nav_links[link]}`)
+                    h1=`${name}`
+            |
+            |
+    |
+    |

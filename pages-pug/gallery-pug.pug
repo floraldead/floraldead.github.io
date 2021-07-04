@@ -1,0 +1,30 @@
+//- gallery.pug
+- let page='gallery'
+doctype html
+html
+    |
+    |
+    include ../includes/head.pug
+    |
+    |
+    script
+        | let fs = require('fs');
+        | let files = fs.readdirSync('../img/');
+    |
+    |
+    body(class='container')
+    |
+    |
+    h1(align='center')
+        a(href=`${page}`) Floral Dead
+    |
+    |
+    include ../includes/nav.pug
+    |
+    |
+    hr
+    |
+    |
+    div(class="main")
+        for file in files
+            h1=`${file}`
